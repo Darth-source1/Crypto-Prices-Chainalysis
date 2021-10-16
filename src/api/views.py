@@ -20,8 +20,8 @@ class CryptoPriceView(APIView):
         url_coinbase_btc = 'https://api.cryptowat.ch/markets/coinbase-pro/btcusd/orderbook'
         url_coinbase_eth = 'https://api.cryptowat.ch/markets/coinbase-pro/ethusd/orderbook'
         
-        url_binance_btc = 'https://api.cryptowat.ch/markets/binance/btcusd/orderbook'
-        url_binance_eth = 'https://api.cryptowat.ch/markets/binance/ethusd/orderbook'
+        url_binance_btc = 'https://api.cryptowat.ch/markets/binance-us/btcusd/orderbook'
+        url_binance_eth = 'https://api.cryptowat.ch/markets/binance-us/ethusd/orderbook'
         
         coinbase_btc = urllib.request.urlopen(url_coinbase_btc).read()
         coinbase_eth = urllib.request.urlopen(url_coinbase_eth).read()
@@ -39,14 +39,14 @@ class CryptoPriceView(APIView):
             'symbol': "BTC",
             "items" : [
                 { 'provider': 'Coinbase Pro', 'price': float(cb_btc['result']['asks'][0][0])},
-                { 'provider': 'Binance', 'price': float(bnb_btc['result']['asks'][0][0])},
+                { 'provider': 'Binance US', 'price': float(bnb_btc['result']['asks'][0][0])},
             ],
         }
         eth_providers_market_buy_price = {
             'symbol': "ETH",
             "items": [
                 { 'provider': 'Coinbase Pro', 'price': float(cb_eth['result']['asks'][0][0])},
-                { 'provider': 'Binance', 'price': float(bnb_eth['result']['asks'][0][0])},
+                { 'provider': 'Binance US', 'price': float(bnb_eth['result']['asks'][0][0])},
             ],
         }
 
@@ -54,14 +54,14 @@ class CryptoPriceView(APIView):
             'symbol': "BTC",
             "items" : [
                 { 'provider': 'Coinbase Pro', 'price': float(cb_btc['result']['bids'][0][0])},
-                { 'provider': 'Binance', 'price': float(bnb_btc['result']['bids'][0][0])},
+                { 'provider': 'Binance US', 'price': float(bnb_btc['result']['bids'][0][0])},
             ],
         }
         eth_providers_market_sell_price = {
             'symbol': "ETH",
             "items": [
                 { 'provider': 'Coinbase Pro', 'price': float(cb_eth['result']['bids'][0][0])},
-                { 'provider': 'Binance', 'price': float(bnb_eth['result']['bids'][0][0])},
+                { 'provider': 'Binance US', 'price': float(bnb_eth['result']['bids'][0][0])},
             ],
         }
 
