@@ -131,8 +131,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LUNAR_API_KEY = env('LUNAR_API_KEY')
-
 CORS_ORIGIN_WHITELIST = [
     # 'http://localhost:3000', Not neccesary now
 ]
