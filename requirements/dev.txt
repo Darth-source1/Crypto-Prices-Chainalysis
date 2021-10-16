@@ -1,0 +1,5 @@
+-r common.txt
+flake8==3.9.2
+pytest==6.2.5
+drf-yasg==1.20.0
+coverage

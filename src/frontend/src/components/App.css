@@ -1,0 +1,83 @@
+.App {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading, .error-alert {
+  background-color: rgb(65, 136, 65);
+  color: white;
+  padding: .5em;
+  margin: 1em 0;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+}
+.error-alert {
+  background-color: rgb(145, 31, 31) !important;
+}
+
+.crypto-list {
+  display: flex;
+  gap: 1em;
+}
+.card-crypto {
+  padding: 1em;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(7, 7, 72) 35%);
+  border-radius: .5em;
+  display: inline-block;
+  color:white;
+  width: 250px;
+  height: max-content;
+}
+.card-crypto .crypto-logo img{
+  max-height: 64px;
+}
+.card-crypto .crypto-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: .5em;
+}
+.crypto-info .crypto-name {
+  font-size: 14px;
+  color:#a7a7a7;
+}
+.card-crypto .crypto-price {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+.crypto-markets {
+  /* border: 1px solid black;
+  border-radius: 8px; */
+  margin-top: .5em;
+}
+.crypto-markets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.crypto-markets ul li {
+  padding: 1em;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+.crypto-markets ul li .market-info {
+  display: flex;
+  justify-content: space-between;
+
+}
+.crypto-markets ul li span:last-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+.crypto-markets ul li:not(:last-child) {
+  margin-bottom: .5em;
+}
