@@ -29,7 +29,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", False)
 
-ALLOWED_HOSTS = ['localhost', 'crypto-best-price.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'glacial-lake-43614.herokuapp.com']
 
 
 # Application definition
