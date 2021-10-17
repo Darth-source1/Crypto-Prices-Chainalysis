@@ -69,8 +69,8 @@ class CryptoPriceView(APIView):
         eth_providers_market_buy_price['items'] = sorted(eth_providers_market_buy_price['items'], key=lambda x: x['price'])
         
 
-        btc_providers_market_sell_price['items'] = sorted(btc_providers_market_sell_price['items'], key=lambda x: x['price'])
-        eth_providers_market_sell_price['items'] = sorted(eth_providers_market_sell_price['items'], key=lambda x: x['price'])
+        btc_providers_market_sell_price['items'] = sorted(btc_providers_market_sell_price['items'], key=lambda x: x['price'], reverse=True)
+        eth_providers_market_sell_price['items'] = sorted(eth_providers_market_sell_price['items'], key=lambda x: x['price'], reverse=True)
         
         providers = {
             "buy":[btc_providers_market_buy_price, eth_providers_market_buy_price],
