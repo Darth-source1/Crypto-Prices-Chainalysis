@@ -43,18 +43,19 @@ Run the development server
 
 Happy Hacking!
 
-# Questionnaire answers:
-1.	Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
+## Questionnaire answers
 
-No, I haven’t taken any sub-optimal choices while development. The app pulls data every 5 seconds from the API.
+1. Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
 
-2.	Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+No, I haven’t taken any sub-optimal choices while development. The app pulls data every 20 seconds from the API.
+
+2. Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
 
 Yes, I have used Django as a backend framework it isn’t required for this simple app. The whole app can easily be designed in native react without any backend requirement.
 
-3.	If you have to scale your solution to 100 users/second traffic, what changes would you make, if any?
+3. If you have to scale your solution to 100 users/second traffic, what changes would you make, if any?
 
-As the backend is coded in Django, we can cache the content that we give to the users for pull time (5 seconds) and then the content is going to be returned from the cache of the Redis database to as many users as we want. This avoids polling data from the API. 
+As the backend is coded in Django, we can cache the content that we give to the users for pull time (20 seconds) and then the content is going to be returned from the cache of the Redis database to as many users as we want. This avoids polling data from the API.
 
 4.	What are some other enhancements you would have made, if you had more time to do this implementation
 
