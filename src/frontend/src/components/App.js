@@ -57,7 +57,7 @@ class App extends Component {
     this.getPrices();
     setInterval(() => {
       this.getPrices();
-    }, 5000);
+    }, 20000);
   }
 
   render() {
