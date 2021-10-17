@@ -59,6 +59,6 @@ As the backend is coded in Django, we can cache the content that we give to the 
 
 4.	What are some other enhancements you would have made, if you had more time to do this implementation
 
-If I had more time to do this implementation, I would do a very interactive UI and show better comparison analytics. On top, I would add Kubernetes containerization to give the app the ability to scale to higher user demand and deploy it in the cloud. We can also integrate Stripe payments to quickly buy BTC/ETH.
+If I had more time to do this implementation, I would do a very interactive UI and show better comparison analytics. On top, I would add Kubernetes containerization to give the app the ability to scale to higher user demand and deploy it in the cloud. We can also integrate Stripe payments to quickly buy BTC/ETH. We are using a traditional HTTP API, which is stateless, which means it works on request/response and every connection is opened and closed after it is completed. cryptowat.ch also offers a websocket API, which helps us keep the connection open and never crashes in the application when it works in real-time (paid feature).
 
 Link to live version: https://glacial-lake-43614.herokuapp.com/
