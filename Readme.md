@@ -24,6 +24,10 @@ Run migrations:
 
     python src/manage.py migrate
 
+Create Cache Table:
+
+    python src/manage.py createcachetable cache_table 
+
 Run check flake8 coding styles and run tests:
 
     flake8 . --extend-exclude=dist,build --show-source --statistics
