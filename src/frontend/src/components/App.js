@@ -65,7 +65,7 @@ class App extends Component {
       <>
         <div className="App">
             <div className="wrapper">
-            <h1>CRYPTO PRICE</h1>
+            <h1>CRYPTO PRICES</h1>
             {!this.state.loaded && <div className="loading">
               {this.state.placeholder}
             </div>
@@ -88,7 +88,7 @@ class App extends Component {
                       </div>
                     </div>
                       <div>
-                        <h4 className="crypto-price">${this.state.cryptos.buy[0].items[0]?.price.toFixed(2)}</h4>
+                        <h4 className="crypto-price">${this.state.cryptos.buy[0].items[0]?.price.toFixed(2)} / ${this.state.cryptos.sell[0].items[0]?.price.toFixed(2)}</h4>
                       </div>
                   </div>
                   <div className="crypto-markets">
@@ -128,7 +128,7 @@ class App extends Component {
                       </div>
                     </div>
                       <div>
-                        <h4 className="crypto-price">${this.state.cryptos.buy[1].items[0]?.price.toFixed(2)}</h4>
+                        <h4 className="crypto-price">${this.state.cryptos.buy[1].items[0]?.price.toFixed(2)} / ${this.state.cryptos.sell[1].items[0]?.price.toFixed(2)}</h4>
                       </div>
                   </div>
                   <div className="crypto-markets">

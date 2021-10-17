@@ -87,6 +87,9 @@
   display: flex;
   flex-direction: column;
 }
+.crypto-markets ul li .market-info small {
+  background-color: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(7, 7, 72) 35%);
+}
 .crypto-markets ul li span:last-child {
   font-weight: bold;
   font-size: 20px;
