@@ -61,18 +61,31 @@
 .crypto-markets ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1em 0;
 }
 .crypto-markets ul li {
   padding: 1em;
-  background-color: black;
   color: white;
   border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.crypto-markets .buy li {
+  background-color: #009E39;
+}
+.crypto-markets .buy li:first-child {
+  background-color: green;
+}
+.crypto-markets .sell li {
+  background-color: #CA2B24;
+}
+.crypto-markets .sell li:first-child {
+  background-color: rgb(206, 4, 4);
 }
 .crypto-markets ul li .market-info {
   display: flex;
-  justify-content: space-between;
-
+  flex-direction: column;
 }
 .crypto-markets ul li span:last-child {
   font-weight: bold;

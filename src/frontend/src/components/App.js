@@ -9,16 +9,24 @@ class App extends Component {
       loaded: false,
       placeholder: "Loading..",
       error: false,
-      cryptos: [
-        {
+      cryptos: {
+        buy: [{
           symbol: "BTC",
           items: [],
         },
         {
           symbol: "ETH",
           items: [],
-        }
-      ]
+        }],
+        sell: [{
+          symbol: "BTC",
+          items: [],
+        },
+        {
+          symbol: "ETH",
+          items: [],
+        }]
+      }
     };
   }
   getPrices() {
@@ -80,16 +88,30 @@ class App extends Component {
                       </div>
                     </div>
                       <div>
-                        <h4 className="crypto-price">${this.state.cryptos[0].items[0]?.price.toFixed(2)}</h4>
+                        <h4 className="crypto-price">${this.state.cryptos.buy[0].items[0]?.price.toFixed(2)}</h4>
                       </div>
                   </div>
                   <div className="crypto-markets">
-                  <ul>
-                      {this.state.cryptos[0].items.map((item, index) => (
+                  <ul className="buy">
+                      {this.state.cryptos.buy[0].items.map((item, index) => (
                         <li key={"btc_"+index}>
-                          {index===0 && <small style={{color:'darkorange'}}>Best Price</small>}
-                          <div className="market-info"><span>{item.provider}</span><span>${item.price.toFixed(2)}</span>
-                        </div></li>
+                          <div className="market-info">
+                            {index===0 && <small>Best Market Buy Price</small>}
+                            <span>{item.provider}</span>
+                          </div>
+                            <span>${item.price.toFixed(2)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="sell">
+                      {this.state.cryptos.sell[0].items.map((item, index) => (
+                        <li key={"btc_"+index}>
+                          <div className="market-info">
+                            {index===0 && <small>Best Market Sell Price</small>}
+                            <span>{item.provider}</span>
+                          </div>
+                            <span>${item.price.toFixed(2)}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -106,22 +128,36 @@ class App extends Component {
                       </div>
                     </div>
                       <div>
-                        <h4 className="crypto-price">${this.state.cryptos[1].items[0]?.price.toFixed(2)}</h4>
+                        <h4 className="crypto-price">${this.state.cryptos.buy[1].items[0]?.price.toFixed(2)}</h4>
                       </div>
                   </div>
                   <div className="crypto-markets">
-                    <ul>
-                      {this.state.cryptos[1].items.map((item, index) => (
+                  <ul className="buy">
+                      {this.state.cryptos.buy[1].items.map((item, index) => (
                         <li key={"eth_"+index}>
-                          {index===0 && <small style={{color:'darkorange'}}>Best Price</small>}
-                          <div className="market-info"><span>{item.provider}</span><span>${item.price.toFixed(2)}</span>
-                        </div></li>
+                          <div className="market-info">
+                            {index===0 && <small>Best Market Buy Price</small>}
+                            <span>{item.provider}</span>
+                          </div>
+                            <span>${item.price.toFixed(2)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="sell">
+                      {this.state.cryptos.sell[1].items.map((item, index) => (
+                        <li key={"eth_"+index}>
+                          <div className="market-info">
+                            {index===0 && <small>Best Market Sell Price</small>}
+                            <span>{item.provider}</span>
+                          </div>
+                            <span>${item.price.toFixed(2)}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
                 </div>
               </div>
-              <h3 style={{marginTop: "3em"}}>
+              <h3 style={{marginTop: "1em"}}>
                 Powered by <span style={{color: "#1f0971"}}>@crypto-prices</span></h3>
             </div>
         </div>
