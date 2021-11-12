@@ -17,11 +17,12 @@ class CryptoPriceView(APIView):
     
     @method_decorator(cache_page(3))
     def get(self, request):
-        url_coinbase_btc = 'https://api.cryptowat.ch/markets/coinbase-pro/btcusd/orderbook'
-        url_coinbase_eth = 'https://api.cryptowat.ch/markets/coinbase-pro/ethusd/orderbook'
+        key = "?apikey=HCQVOZC2OGABFG7N1F64"
+        url_coinbase_btc = 'https://api.cryptowat.ch/markets/coinbase-pro/btcusd/orderbook' + key
+        url_coinbase_eth = 'https://api.cryptowat.ch/markets/coinbase-pro/ethusd/orderbook' + key 
         
-        url_binance_btc = 'https://api.cryptowat.ch/markets/binance-us/btcusd/orderbook'
-        url_binance_eth = 'https://api.cryptowat.ch/markets/binance-us/ethusd/orderbook'
+        url_binance_btc = 'https://api.cryptowat.ch/markets/binance-us/btcusd/orderbook' + key
+        url_binance_eth = 'https://api.cryptowat.ch/markets/binance-us/ethusd/orderbook' + key
         
         coinbase_btc = urllib.request.urlopen(url_coinbase_btc).read()
         coinbase_eth = urllib.request.urlopen(url_coinbase_eth).read()
