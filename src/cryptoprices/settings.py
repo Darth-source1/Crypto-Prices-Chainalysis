@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os, environ
 from pathlib import Path
-import django_heroku
-
 
 env = environ.Env()
 
@@ -28,6 +26,9 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", True)
+
+if not DEBUG:
+    import django_heroku
 
 ALLOWED_HOSTS = ['localhost', 'glacial-lake-43614.herokuapp.com']
 
@@ -135,6 +136,7 @@ CORS_ORIGIN_WHITELIST = [
     # 'http://localhost:3000', Not neccesary now
 ]
 
-django_heroku.settings(locals())
+if not DEBUG:
+    django_heroku.settings(locals())
 
 CACHE_BACKEND = 'db://cache_table'
