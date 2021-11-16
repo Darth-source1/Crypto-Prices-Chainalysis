@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development --entry ./src/index.js --output-path ./static/frontend",
     "build": "webpack --mode production --entry ./src/index.js --output-path ./static/frontend",
-    "watch": "watch 'npm run build' ./src/"
+    "watch": "watch 'npm run build' ./src/",
+    "start": "react-scripts start"
   },
   "keywords": [],
   "author": "",

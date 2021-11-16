@@ -1,3 +1,5 @@
+#NOTE
+Now adding a new crypto asset is as easy as adding a new dict {} in the 'params' list[] in /src/api/views.py (line 78)
 # Crypto Prices
 
 RESTful API to manage crypto prices

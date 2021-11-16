@@ -30,7 +30,7 @@ DEBUG = os.getenv("DEBUG", True)
 if not DEBUG:
     import django_heroku
 
-ALLOWED_HOSTS = ['localhost', 'glacial-lake-43614.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'glacial-lake-43614.herokuapp.com',"127.0.0.1"]
 
 
 # Application definition
